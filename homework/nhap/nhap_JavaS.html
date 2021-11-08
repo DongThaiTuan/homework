@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javácript</h2>
+    <hr>
+    <button id="btnClickme">Click me </button>
+    <p id="greeting"></p>
+</body>
+<script>
+    document.getElementById("btnClickme").onclick=function(){
+        let kq=prompt("Enter your name :")
+        let s="";
+        if(kq==null || kq==""){
+            s = "Hi, <b><i>stranger </i></b>"
+        }
+        else{
+            s = "Hi, Mr/Ms. <b>" + kq + "</b>. How are you today ?"
+
+        }
+        document.getElementById("greeting").innerHTML=s;
+    }
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+    form{
+        width: 50%;
+        padding: 10px;
+    }
+
+    form label{
+        display: inline-block;
+        width: 10em;
+    }
+    </style>
+
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <hr>
+    <form action="../lap08/L08_Login_Welcome.html" method="get">
+        <fieldset>
+            <label for=""> Username</label>
+            <input type="text" name="User" id="User" placeholder="nhap tai khoan"
+                    autofocus required> <br><br>
+            
+            <label for="">Passwork</label>
+            <input type="passwork" name="pass" id="pass" pattern="^\d(3)$"
+                    placeholder="nhap mat ma" required> <br><br>
+            
+             <label for="">Email </label>
+            <input type="email" name="mail" id="mail" placeholder="nhap email"> <br><br>
+            
+            <label for="">Gender</label>
+            Male <input type="radio" name="gender" id="male " checked value="male">
+            Female <input type="radio" name="genger" id="femail" value="female"> <br><br>
+
+            <label for="">Location</label>
+            <select name="cbLoc" id="cbLoc">
+                <option value="SG">Saigon</option>
+                <option value="HN">Hanoi</option>
+                <option value="HU">Hue</option>
+                <option value="DN">Danang</option>
+            </select><br><br>
+
+            <label for="">Birtday</label>
+            <input type="date" name="BD" id="BD" value="2000-05-15"> <br><br>
+
+            <label for="">Rating</label>
+            <input type="number" name="Rate" id="Rate" min="1" max="5" value="4" required>
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </fieldset>
+
+
+    </form>
+</body>
+</html>

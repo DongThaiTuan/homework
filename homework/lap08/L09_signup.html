@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            color: green;
+        }
+
+        h3 {
+            color: red;
+        }
+
+        form {
+            width: fit-content;
+            padding: 20px ;
+            background-color: rgb(231, 243, 247);
+        }
+
+        form label {
+            display: inline-block;
+
+        }
+
+        input[type="submit"] {
+            padding: .5em 6em;
+            background-color: green;
+            color: whitesmoke;
+            border: gainsboro;
+            border-radius: .5em;
+        }
+
+        select {
+            background-color: rgb(231, 243, 247);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="../lap08/L08_home.html">
+
+        <h2>Sign Up</h2>
+        <h3>Your basic info</h3>
+        <div>
+            <label for="">Name:</label> <br>
+            <input type="text" name="name" id="name" placeholder="ten dang nhap" autofocus required> <br><br>
+        </div>
+
+        <div>
+            <label for="">Email:</label> <br>
+            <input type="email" name="mail" id="mail" placeholder="Nhap email" required> <br><br>
+
+        </div>
+
+        <div>
+            <label for="">Password:</label> <br>
+            <input type="password" name="pass" id="pass" placeholder="nhap password" required> <br><br>
+
+        </div>
+
+        <div>
+            <label for="">Age:</label><br>
+            <input type="radio" name="Age" id="Age1" value="Under 18" checked> Under 18 <br>
+            <input type="radio" name="Age" id="Age2" value="18 or older"> 18 or older <br>
+
+        </div>
+
+        <h3>Your profile</h3>
+
+        <div>
+            <label for="">Biography:</label><br>
+            <textarea name="comment" id="" cols="30" rows="2" required></textarea><br>
+
+        </div>
+
+        <div>
+            <label for="">Job Role:</label><br>
+            <select name="job" id="job">
+                <optgroup label="Wed">
+                    <option value="Front-End">Front-End Developer</option>
+                    <option value="PHP">PHP Developer</option>
+                    <option value="Python">Python Developer</option>
+                    <option value="Wed">Wed Developer</option>
+                    <option value="WordPress">WordPress Developer</option>
+                </optgroup>
+                <optgroup label="Mobile">
+                    <option value="Androild">Androild Developer</option>
+                    <option value="IOS">IOS Devloper</option>
+                    <option value="Mobile">Mobile Developer</option>
+                </optgroup>
+                <optgroup label="Busniness">
+                    <option value="Business">Business Owner</option>
+                    <option value="Freelancer">Freelancer</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <option value="Secretary">Secretary</option>
+                    <option value="Maintenance">Maintenance</option>
+                </optgroup>
+            </select><br><br>
+            <input type="submit" value="Sign up">
+        </div>
+    </form>
+</body>
+
+</html>
