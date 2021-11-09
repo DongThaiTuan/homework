@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Javácript While-loop</h2>
+    <hr>
+    <form action="" id="form-sum" name="form-sum">
+        <div>
+            <label for="">Input number</label>
+            <input type="number" name="n" id="n" value="10" min="4" max="200">
+        </div>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+        <div>
+            <label for="">Sum </label>
+            <input type="number" name="Sum" id="Sum">
+        </div>
+    </form>
+    <script>
+        document.getElementById("form-sum").onsubmit=function(e){
+            e.preventDefault();
+
+            let n = parseInt(document.getElementById("n").value);
+            let sum = 0;
+            let i = 0;
+            while(i<=n){
+                sum += i;
+                i++;
+            }
+            document.getElementById("Sum").value=sum;
+        }
+    </script>
+</body>
+
+</html>

@@ -7,82 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework</title>
     <style>
-        #content{
+        #content {
             background-color: black;
+
         }
-        #logo{
+
+        #logo {
             width: 15%;
         }
+
         #d2 {
             float: right;
             padding: 1.5em;
+
         }
 
         a {
             text-decoration: none;
             color: white;
         }
-        select{
+
+        select {
             background-color: #000000;
             color: white;
             padding: .2em 1em;
         }
-        input[type="submit"]{
+
+        input[type="submit"] {
             background-color: black;
             color: white;
             padding: .2em 1em;
         }
-        input[type="reset"]{
-            background-color: black;
-            color: white;
-            padding: .2em 1em;
+        td{
+            text-align: center;
+            font-style: italic;
         }
-        table{
-            width: 50%;
-        }
-        #p1{
-           width: 900px;
-        }
-        #p2{
-            width: 550px;
-        }
+
     </style>
 </head>
 
 <body>
     <div id="content">
-        <form action="../lap08/L08_Login.html">
-            <img id="logo" src="../lap08/lab guide 8 images/logo.PNG" alt="">
-            <div id="d2">
-                <a href="#">home</a>
-                <select name="home" id="home">
-                    <option value="Pages">Pages</option>
-                </select>
-                <a href="#">Contact</a>
-                <input type="submit" value="LOG IN">
-                <input type="reset" value="SIGN UP">
-            </div>
-    
-    
-        </form>
-    
-    
+        <img id="logo" src="../lap08/lab guide 8 images/logo.PNG" alt="">
+        <div id="d2">
+            <table>
+                <th>
+                    <a href="#">home</a>
+                </th>
+
+                <th>
+                    <select name="home" id="home">
+                        <option value="Pages">Pages</option>
+                    </select>
+                </th>
+
+                <th>
+                    <a href="#">Contact</a>
+                </th>
+                <th>
+                    <form action="../lap08/L08_Login.html">
+                        <input type="submit" value="LOG IN">
+                    </form>
+                </th>
+
+                <th>
+                    <form action="../lap08/L09_signup.html">
+                        <input type="submit" value="SIGN UP">
+                    </form>
+                </th>
+            </table>
+        </div>
     </div>
     <table>
         <tr>
-            <td><img id="p1"  src="../lap08/lab guide 8 images/p1_edited.jpg" alt=""></td>
-            <td><img id="p2" src="../lap08/lab guide 8 images/p2 (1)_edited.jpg" alt=""></td>
+            <th><img id="p1" src="../lap08/lab guide 8 images/p1_edited_edited.jpg" alt=""></th>
+            <th><img id="p2" src="../lap08/lab guide 8 images/p2 (1)_edited_edited.jpg" alt=""></th>
+        </tr>
+        <tr>
+            <td colspan="2">Copyright &copy; 2018 By ABC Group.</td>
         </tr>
     </table>
-   
-    
-
-   
-      
-   
-    
-
-
 </body>
 
 </html>
