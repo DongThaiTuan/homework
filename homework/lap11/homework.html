@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            width: fit-content;
+            background-color: bisque;
+            padding: 10px;
+        }
+        form label{
+            display: inline-block;
+            width: 10em;
+        }
+        h2{
+            color: green;
+        }
+        input[type="submit"]{
+            padding: .4em 1.8em;
+        }
+        input[type="reset"]{
+            padding: .4em 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" id="aptech" name="aptech">
+        <fieldset>
+            <legend>Create Signup wed page as below</legend>
+            <h2>Enter details of your account</h2>
+            <hr>
+            <div>
+                <label for="">First Name</label>
+                <input type="text" name="first" id="first" autofocus required value="Aptech"><br><br>
+            </div>
+
+            <div>
+                <label for="">Last Name</label>
+                <input type="text" name="last" id="last" required value="FPT"><br><br>
+            </div>
+
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email" id="email" required value="aptechfpt@edu.vn"><br><br>
+            </div>
+
+            <div>
+                <label for="">Age</label>
+                <input type="number" id="age" name="age" min="18" max="30" required value="18"><br><br>
+            </div>
+
+            <div>
+                <label for="">Are you employed</label>
+                Yes <input type="radio" id="are1" name="are" value="Yes" checked>
+                No <input type="radio" name="are" id="are2" value="No">
+            </div>
+            <hr>
+            <input type="submit" value="OK">
+            <input type="reset" value="Cancel">
+        </fieldset>
+
+    </form>
+</body>
+<script>
+    document.getElementById("aptech").onsubmit = function () {
+        let first = document.getElementById("first").value.trim();
+        let last = document.getElementById("last").value.trim();
+
+        if (first != "Aptech" || last != "FPT") {
+            alert("Invalid account !");
+        }
+        else {
+            alert("Congratulations !!");
+        }
+        document.getElementById("first").focus();
+        document.getElementById("last").focus();
+    }
+</script>
+
+</html>
