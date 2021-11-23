@@ -33,7 +33,7 @@
 
 <body>
 
-    <form action="" id="aptech" name="aptech">
+    <form action="" id="aptech" name="aptech" method="get">
         <fieldset>
             <legend>Create Signup wed page as below</legend>
             <h2>Enter details of your account</h2>
@@ -75,7 +75,7 @@
         let first = document.getElementById("first").value.trim();
         let last = document.getElementById("last").value.trim();
 
-        if (first != "Aptech" || last != "FPT") {
+        if (first != "Aptech" || last != "FPT"){
             alert("Invalid account !");
         }
         else {

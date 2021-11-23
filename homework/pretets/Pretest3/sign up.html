@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .form{
+            width: 40%;
+            margin: auto;
+            box-shadow: 3px 3px 3px grey;
+           
+        }
+        h2{
+            color: green;
+            text-shadow: 3px 3px 3px aquamarine;
+        }
+        .form-login{
+            padding: 10px;
+            margin: 5px;
+        }
+        .form-login label{
+            display: inline-block;
+            width: 200px;
+        }
+        .submit{
+            background-color: red;
+            border: solid;
+            border-radius: 5px;
+            padding: 3px 25px;
+        }
+        .reset{
+            background-color: blue;
+            border: solid;
+            border-radius: 5px;
+            padding: 3px 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <fieldset>
+            <form action="" id="form-">
+                <h2>Student information</h2>
+                <hr>
+                <div class="form-login">
+                    <label for="">Name</label>
+                    <input type="text" name="name" id="name" required pattern="[a-z A-Z]{6,30}" value="Dong Thai Tuan">
+                </div>
+                <div class="form-login">
+                    <label for="">Gender</label>
+                    <input type="radio" name="gender" id="gender_m" value="Male" checked>Male
+                    <input type="radio" name="gender" id="gender_f" value="Female">Female
+                </div>
+                <div class="form-login">
+                    <label for="">Address</label>
+                    <input type="text" name="add" id="add" value="Ninthuan">
+                </div>
+                <div class="form-login">
+                    <label for="">Email</label>
+                    <input type="email" name="mail" id="mail" value="tuan@gmail.com" pattern="[a-zA-Z0-9]{3,}@[a-zA-Z0-9]{2,6}\.[a-zA-Z]{2,6}">
+                </div>
+                <div class="form-login">
+                    <label for="">Phone</label>
+                    <input type="text" name="phone" id="phone" value="012-3456789" pattern="[0-9]{3}-[0-9]{7,0}">
+
+                </div>
+                <div class="form-login">
+                    <label for="">Qualification</label>
+                    <select name="op" id="op">
+                        <option value="Bachelor">Bachelor</option>
+                        <option value="degree">degree</option>
+                        <option value="Master">Master</option>
+                        <option value="PhD">PhD</option>
+                        <option value="None">None</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <button class="submit" type="submit">Submit</button>
+                    <button class="reset" type="reset">Reset</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+    <script>
+        document.getElementById("form-").onsubmit=function(e){
+           e.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let add = document.getElementById("add").value;
+            let mail = document.getElementById("mail").value;
+            let phone = document.getElementById("phone").value;
+            let op = document.getElementById("op").value;
+
+
+
+            let a = ["<h2>Student infomation Successful Registration</h2>"];
+            a.push(`Nane: ${name}`);
+            a.push(`Gender: ${gender}`);
+            a.push(`Address ${add}`);
+            a.push(`Email: ${mail}`);
+            a.push(`Phone: ${phone}`);
+            a.push(`Qualification: ${op}`)
+
+            alert(a.join("\n"));
+
+            let new_win = window.open();
+            new_win = document.write(a.join("<br>"));
+        }
+    </script>
+</body>
+</html>

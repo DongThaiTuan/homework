@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tavasctript math Demo</h2>
+    <hr>
+    <form action="" id="math">
+        <div>
+            <label for="">Nhap 1 so bat ky:</label>
+            <input type="text" name="num" id="num" required value="3.14">
+        </div>
+        <div>
+            <input type="submit" value="Text">
+            <input type="reset" value="Reset">
+        </div>
+        <textarea name="result" id="result" cols="50" rows="10" readonly></textarea>
+    </form>
+    <script>
+        document.getElementById("math").onsubmit=function(e){
+            e.preventDefault();
+
+            let num = document.getElementById("num").value;
+
+            if(isNaN(num)){
+                alert("vui long nhap 1 so bat ky");
+                document.getElementById("num").focus();
+                return;
+            }
+            num = parseFloat(num);
+            let a = [];
+            a.push(`Celling(num) = ${math.cell(num)}`);
+
+            document.getElementById("result").value = a.join("\n");
+        }
+    </script>
+</body>
+
+</html>

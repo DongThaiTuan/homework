@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>Javáctript</h2>
+    <hr>
+    <fieldset>
+        <legend>String Demo</legend>
+        <form action="" id="string">
+            <div>
+                <label for="">Nhap chuoi thu 1: </label>
+                <input type="text" name="s1" id="s1" required value="Dong Thai Tuan">
+            </div>
+
+            <div>
+                <label for="">Nhap chuoi thu 2: </label>
+                <input type="text" name="s2" id="s2" required value="Dong">
+            </div>
+
+            <div>
+                <input type="submit" value="Dong Y">
+                <input type="reset" value="Huy">
+            </div>
+
+            <div>
+                <label for="">Nhap vi tri:: </label>
+                <input type="number" name="index" id="index" required value="0" min="0">
+            <hr>
+            
+        </form>
+        <div id="result">
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p2"></p>
+        </div>
+    </fieldset>
+</body>
+<script>
+    document.getElementById("string").onsubmit=function(e){
+        e.preventDefault();
+
+        let s1 = new String (document.getElementById("s1").value.trim());
+        let s2 = new String (document.getElementById("s2").value.trim());
+
+        let p1 = s1.length;
+        document.getElementById("p1").innerHTML = `so ky tu trong chuoi 1: ${p1}`;
+
+        let index = new String (document.getElementById("index").value);
+        document.getElementById("p2").innerHTML=`ky tu trong chuoi tai vi tri index ${index}: ${s1.charAt(index)}`;
+
+        let vitri_1 = s1.indexOf(s2);
+        document.getElementById("p3").innerHTML=`chuoi 2 xuat hien ta vij tri  ${vitri_1} trong chuoi 1`;
+    }
+</script>
+</html>
